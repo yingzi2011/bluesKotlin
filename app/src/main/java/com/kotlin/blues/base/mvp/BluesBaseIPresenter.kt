@@ -1,4 +1,4 @@
-package com.kotlin.blues.qi.base.mvp
+package com.kotlin.blues.base.mvp
 
 /**
  * Created by qishoudong on 2017/6/12.

@@ -1,4 +1,4 @@
-package com.kotlin.blues.qi.adapter
+package com.kotlin.blues.adapter
 
 import android.support.v7.widget.RecyclerView
 import android.view.ViewGroup

@@ -1,4 +1,4 @@
-package com.kotlin.blues.qi
+package com.kotlin.blues
 
 import android.app.Application
 

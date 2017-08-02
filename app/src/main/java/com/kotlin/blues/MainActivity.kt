@@ -1,8 +1,7 @@
-package com.kotlin.blues.qi
+package com.kotlin.blues
 
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
-import com.kotlin.blues.qi.base.activity.BluesBaseActivity
+import com.kotlin.blues.base.activity.BluesBaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BluesBaseActivity() {
@@ -11,7 +10,7 @@ class MainActivity : BluesBaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         testView.text = "Hello Kotlin！！！"
-        recyclerview.layoutManager = LinearLayoutManager(this)
+//        recyclerview.layoutManager = LinearLayoutManager(this)
 //        recyclerview.adapter = BluesTestAdapter(BluesTestItems())
     }
 

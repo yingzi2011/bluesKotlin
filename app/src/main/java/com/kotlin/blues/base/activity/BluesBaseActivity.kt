@@ -1,4 +1,4 @@
-package com.kotlin.blues.qi.base.activity
+package com.kotlin.blues.base.activity
 
 import android.app.Activity
 import android.os.Bundle

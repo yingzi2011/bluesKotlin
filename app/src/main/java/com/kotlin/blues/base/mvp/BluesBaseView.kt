@@ -1,4 +1,4 @@
-package com.kotlin.blues.qi.base.mvp
+package com.kotlin.blues.base.mvp
 
 import android.content.Context
 import android.content.Intent

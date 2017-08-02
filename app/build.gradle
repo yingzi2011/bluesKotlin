@@ -7,7 +7,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.kotlin.blues.qi"
+        applicationId "com.kotlin.blues"
         minSdkVersion 21
         targetSdkVersion 25
         versionCode 1

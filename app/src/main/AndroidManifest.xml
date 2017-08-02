@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.kotlin.blues.qi">
+    package="com.kotlin.blues">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.kotlin.blues.qi.BluesApplication"
+        android:name="com.kotlin.blues.BluesApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="com.kotlin.blues.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
