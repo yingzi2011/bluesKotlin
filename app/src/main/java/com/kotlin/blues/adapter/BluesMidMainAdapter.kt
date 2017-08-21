@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.blues_middle_list_item.view.*
  */
 class BluesMidMainAdapter(var bluesItems: List<String>) : RecyclerView.Adapter<BluesMidMainAdapter.MyViewHolder>() {
 
-
+    var inter: MyOnItemClickListener? = null;
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): MyViewHolder {
         var view = LayoutInflater.from(parent?.context).inflate(R.layout.blues_middle_list_item, parent, false)
         return MyViewHolder(view)
@@ -22,6 +22,7 @@ class BluesMidMainAdapter(var bluesItems: List<String>) : RecyclerView.Adapter<B
 
     override fun onBindViewHolder(holder: MyViewHolder?, position: Int) {
         holder?.testName!!.text = bluesItems.get(position)
+        holder?.testName.setOnClickListener({ inter?.itemClick(position) })
 
     }
 
@@ -34,9 +35,22 @@ class BluesMidMainAdapter(var bluesItems: List<String>) : RecyclerView.Adapter<B
         bluesItems = items
     }
 
+    //    fun getBluesItems(): List<String> {
+//        return bluesItems
+//    }
+    fun setOnclickliseer(inter: MyOnItemClickListener) {
+        this.inter = inter
+    }
+
+
     class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-         val testName=view.blues_item_name
-         val image=view.blues_item_img
+        val testName = view.blues_item_name
+        val image = view.blues_item_img
+    }
+
+
+    interface MyOnItemClickListener {
+        fun itemClick(postion: Int)
     }
 
 }

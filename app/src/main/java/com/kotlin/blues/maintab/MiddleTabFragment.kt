@@ -1,15 +1,15 @@
 package com.kotlin.blues.maintab
 
-import android.content.res.TypedArray
 import android.os.Bundle
-import android.support.v4.content.res.TypedArrayUtils
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.kotlin.blues.R
 import com.kotlin.blues.adapter.BluesMidMainAdapter
 import com.kotlin.blues.base.BluesBaseFragment
+import com.kotlin.blues.util.CommonToast
 import kotlinx.android.synthetic.main.blues_middle_fragment_tab.*
 import java.util.ArrayList
 
@@ -35,6 +35,13 @@ class MiddleTabFragment : BluesBaseFragment() {
         bluesMidListview.layoutManager = LinearLayoutManager(activity)
         val mAdapter = BluesMidMainAdapter(getDataList())
         bluesMidListview.adapter = mAdapter
+//        bluesMidListview.setoNC
+        mAdapter.setOnclickliseer(object :BluesMidMainAdapter.MyOnItemClickListener{
+            override fun itemClick(postion: Int) {
+                var info=mAdapter.bluesItems.get(postion)
+                CommonToast.getCommonToast(info)
+            }
+        })
     }
 
     private fun getDataList(): List<String> {
